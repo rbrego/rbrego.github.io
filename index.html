@@ -16,6 +16,7 @@
             gap: 20px;
         }
         .group {
+            position: relative;
             border: 5px solid #ccc;
             padding: 10px;
             width: 300px;
@@ -29,6 +30,22 @@
             font-size: 20px;
             color: #333;
         }
+
+
+        /* SOLD overlay */
+        .sold-overlay {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            font-size: 40px;
+            transform: rotate(-15deg);
+            z-index: 10;
+        }
+
     </style>
 </head>
 <body>
@@ -73,6 +90,7 @@
             <p class="description">Panela de Pressão Rochedo (pouco uso) 6L  <strong>R$250</strong></p>
         </div>
         <div class="group">
+            <div class="sold-overlay">VENDIDO</div>
             <img src="Images/Frying Pan 1.jpg" alt="Image 1escription">
             <img src="Images/Frying Pan 2.jpg" alt="Image 1escription">
             <p class="description">Frigideira Grande Capholon nova (nunca usada e na caixa) <strong>R$280</strong></p>
@@ -83,6 +101,7 @@
             <p class="description">Fruteira de rodinhas com 3 cestas e prateleira <strong>R$80</strong></p>
         </div>
         <div class="group">
+            <div class="sold-overlay">VENDIDO</div>
             <img src="Images/Pasta pot 1.jpg" alt="Image 1escription">
             <img src="Images/Pasta pot 2.jpg" alt="Image 1escription">
             <img src="Images/pasta pot 3.jpg" alt="Image 1escription">
@@ -150,7 +169,8 @@
             <p class="description">Bandeja de inox <strong>R$30</strong></p>
         </div>
         <div class="group">
-            <img src="Images/China Set.jpg" alt="Image 1escription">
+            <div class="sold-overlay">VENDIDO</div>
+            <img src="Images/China Set.jpg" alt="Image description">
             <p class="description">Louças avulsas para o dia a dia. Tudo que está na foto por <strong>R$25</strong></p>
         </div>
         <div class="group">
