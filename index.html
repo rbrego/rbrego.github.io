@@ -10,26 +10,31 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        
 
         hr {
             border-top: 3px solid black
         }
+
         .gallery {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
+
         .group {
             position: relative;
             border: 5px solid #ccc;
             padding: 10px;
             width: 300px;
         }
-        .group img {
-            max-width: 100%;
-            display: block;
-            margin-bottom: 10px;
-        }
+
+            .group img {
+                max-width: 100%;
+                display: block;
+                margin-bottom: 10px;
+            }
+
         .description {
             font-size: 20px;
             color: #333;
@@ -50,195 +55,384 @@
             z-index: 10;
         }
 
+
+        .collapsible {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 250ms ease;
+        }
+
+        .collapsible__inner {
+            padding: 12px 0;
+        }
+
+        .collapsible-toggle {
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+
+        /* Optional caret indicator */
+        .collapsible-toggle::after {
+            content: "▾";
+            float:left;
+            transition: transform 200ms ease;
+        }
+
+        .collapsible-toggle[aria-expanded="true"]::after {
+            transform: rotate(180deg);
+        }
+
     </style>
 </head>
 <body>
+
     <h1>Lista de Items para Mudança</h1>
-    <h2>Ricardo</h2>
-    <div class="gallery">
-        <!-- Single image with description -->
-        <div class="group">
-            <img src="Images/IMG_8122.jpg" alt="Image description">
-            <p class="description">Buffet de Jacaranda - Ricardo</p>
-        </div>
-        <!-- Single image with description -->
-        <div class="group">
-            <img src="Images/IMG_8131.jpg" alt="Image description">
-            <p class="description">Estante de Livros - Ricardo</p>
+
+
+    <div class="collapsible-group" data-accordion="false">
+
+
+
+        <div class="collapsible-item">
+            <h2 class="collapsible-toggle"
+                aria-expanded="true"
+                aria-controls="section-1"
+                id="toggle-1">
+                Ricardo
+            </h2>
+
+            <div id="section-1" class="collapsible" role="region" aria-labelledby="toggle-1" aria-hidden="false">
+                <div class="collapsible__inner">
+                    <div class="gallery">
+                        <!-- Single image with description -->
+                        <div class="group">
+                            <img src="Images/IMG_8122.jpg" alt="Image description">
+                            <p class="description">Buffet de Jacaranda - Ricardo</p>
+                        </div>
+                        <!-- Single image with description -->
+                        <div class="group">
+                            <img src="Images/IMG_8131.jpg" alt="Image description">
+                            <p class="description">Estante de Livros - Ricardo</p>
+                        </div>
+
+
+                        <div class="group">
+                            <img src="Images/IMG_8136.JPEG" alt="Image description">
+                            <p class="description">Bandeja de Prata 1 - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_8137.JPEG" alt="Image description">
+                            <p class="description">Bandeja de Prata 2 - Ricardo</p>
+                        </div>
+                        <div class="group">
+                            <img src="Images/IMG_8138.JPEG" alt="Image description">
+                            <p class="description">Bandeja de Prata 3 - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_8139.JPEG" alt="Image description">
+                            <p class="description">Bandeja de Prata 4 - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_8140.JPEG" alt="Image description">
+                            <p class="description">Bandeja de Prata 5 - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_8142.JPEG" alt="Image description">
+                            <p class="description">Bandeja de Prata 6 - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_8143.JPEG" alt="Image description">
+                            <p class="description">Bandeja de Prata 7 - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_8144.JPEG" alt="Image description">
+                            <p class="description">Leitera de Prata - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_8145.JPEG" alt="Image description">
+                            <p class="description">pequena bandeja de Prata x2 - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_8146.JPEG" alt="Image description">
+                            <p class="description">Açucareiro de Prata - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_8147.JPEG" alt="Image description">
+                            <p class="description">Esqueiro de Prata - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/~" alt="Image description">
+                            <p class="description">Mesinha de madeira x2 (storage) - Ricardo</p>
+                        </div>
+                        <div class="group">
+                            <img src="Images/IMG_5852.jpeg" alt="Image description">
+                            <p class="description">Lustre de madeira (storage) - Ricardo</p>
+                        </div>
+                        <div class="group">
+                            <img src="Images/~" alt="Image description">
+                            <p class="description">Prateleira de madeira da Vó Diva (storage) - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5974.jpg" alt="Image description">
+                            <p class="description">Maquina de Costura - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/~" alt="Image description">
+                            <p class="description">Caixas de Lego (Storage) - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5970.jpg" alt="Image description">
+                            <p class="description">Movel de quadrados - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5886.jpg" alt="Image description">
+                            <p class="description">Jogo de louça azul - Ricardo</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5985.jpg" alt="Image 1escription">
+                            <p class="description">Jogo de Facas de Queijo - Ricardo</p>
+                        </div>
+
+                        <!-- IMAGE BLOCK TEMPLATE -->
+                        <!--
+                        <div class="group">
+                            <img src="Images/" alt="Image 1escription">
+                            <p class="description"></p>
+                        </div>
+
+
+                        <div class="sold-overlay">VENDIDO</div>
+
+                        -->
+                    </div>
+                </div>
+            </div>
         </div>
 
 
-        <div class="group">
-            <img src="Images/IMG_8136.JPEG" alt="Image description">
-            <p class="description">Bandeja de Prata 1 - Ricardo</p>
-        </div>
 
-        <div class="group">
-            <img src="Images/IMG_8137.JPEG" alt="Image description">
-            <p class="description">Bandeja de Prata 2 - Ricardo</p>
-        </div>
-        <div class="group">
-            <img src="Images/IMG_8138.JPEG" alt="Image description">
-            <p class="description">Bandeja de Prata 3 - Ricardo</p>
-        </div>
 
-        <div class="group">
-            <img src="Images/IMG_8139.JPEG" alt="Image description">
-            <p class="description">Bandeja de Prata 4 - Ricardo</p>
-        </div>
 
-        <div class="group">
-            <img src="Images/IMG_8140.JPEG" alt="Image description">
-            <p class="description">Bandeja de Prata 5 - Ricardo</p>
-        </div>
 
-        <div class="group">
-            <img src="Images/IMG_8142.JPEG" alt="Image description">
-            <p class="description">Bandeja de Prata 6 - Ricardo</p>
-        </div>
+        <br />
+        <br />
+        <br />
+        <hr />
 
-        <div class="group">
-            <img src="Images/IMG_8143.JPEG" alt="Image description">
-            <p class="description">Bandeja de Prata 7 - Ricardo</p>
-        </div>
 
-        <div class="group">
-            <img src="Images/IMG_8144.JPEG" alt="Image description">
-            <p class="description">Leitera de Prata - Ricardo</p>
-        </div>
 
-        <div class="group">
-            <img src="Images/IMG_8145.JPEG" alt="Image description">
-            <p class="description">pequena bandeja de Prata x2 - Ricardo</p>
-        </div>
+        <div class="collapsible-item">
+            <h2 class="collapsible-toggle"
+                aria-expanded="true"
+                aria-controls="section-2"
+                id="toggle-2">
+                Renata
+            </h2>
 
-        <div class="group">
-            <img src="Images/IMG_8146.JPEG" alt="Image description">
-            <p class="description">Açucareiro de Prata - Ricardo</p>
-        </div>
+            <div id="section-2" class="collapsible" role="region" aria-labelledby="toggle-2" aria-hidden="false">
+                <div class="collapsible__inner">
+                    <div class="gallery">
+                        <div class="group">
+                            <img src="Images/IMG_5975.jpg" alt="Image description">
+                            <p class="description">Arca - Renata</p>
+                        </div>
 
-        <div class="group">
-            <img src="Images/IMG_8147.JPEG" alt="Image description">
-            <p class="description">Esqueiro de Prata - Ricardo</p>
-        </div>
 
-        <div class="group">
-            <img src="Images/~" alt="Image description">
-            <p class="description">Mesinha de madeira x2 (storage) - Ricardo</p>
-        </div>
-        <div class="group">
-            <img src="Images/IMG_5852.jpeg" alt="Image description">
-            <p class="description">Lustre de madeira (storage) - Ricardo</p>
-        </div>
-        <div class="group">
-            <img src="Images/~" alt="Image description">
-            <p class="description">Prateleira de madeira da Vó Diva (storage) - Ricardo</p>
-        </div>
+                        <!-- IMAGE BLOCK TEMPLATE -->
+                        <!--
+                        <div class="group">
+                            <img src="Images/" alt="Image 1escription">
+                            <p class="description"></p>
+                        </div>
 
-        <div class="group">
-            <img src="Images/IMG_5974.jpg" alt="Image description">
-            <p class="description">Maquina de Costura - Ricardo</p>
-        </div>
 
-        <div class="group">
-            <img src="Images/~" alt="Image description">
-            <p class="description">Caixas de Lego (Storage) - Ricardo</p>
-        </div>
+                        <div class="sold-overlay">VENDIDO</div>
 
-        <div class="group">
-            <img src="Images/IMG_5970.jpg" alt="Image description">
-            <p class="description">Movel de quadrados - Ricardo</p>
-        </div>
-
-        <div class="group">
-            <img src="Images/IMG_5886.jpg" alt="Image description">
-            <p class="description">Jogo de louça azul - Ricardo</p>
-        </div>
-
-        <!-- IMAGE BLOCK TEMPLATE -->
-        <!--
-        <div class="group">
-            <img src="Images/" alt="Image 1escription">
-            <p class="description"></p>
+                        -->
+                    </div>
+                </div>
+            </div>
         </div>
 
 
-        <div class="sold-overlay">VENDIDO</div>
 
-        -->
+
+        <br />
+        <br />
+        <br />
+        <hr />
+
+
+        <div class="collapsible-item">
+            <h2 class="collapsible-toggle"
+                aria-expanded="true"
+                aria-controls="section-3"
+                id="toggle-3">
+                Carla
+            </h2>
+
+            <div id="section-3" class="collapsible" role="region" aria-labelledby="toggle-3" aria-hidden="false">
+                <div class="collapsible__inner">
+                    <div class="gallery">
+
+                        <div class="group">
+                            <img src="Images/IMG_5984.jpg" alt="Image 1escription">
+                            <p class="description">Mesinha 1 - Carla</p>
+                        </div>
+                        <div class="group">
+                            <img src="Images/IMG_5980.jpg" alt="Image 1escription">
+                            <p class="description">Mesinha 2 - Carla</p>
+                        </div>
+                        <div class="group">
+                            <img src="Images/IMG_5979.jpg" alt="Image 1escription">
+                            <p class="description">Cadeira de Palinha x2 - Carla</p>
+                        </div>
+                        <div class="group">
+                            <img src="Images/IMG_5981.jpg" alt="Image 1escription">
+                            <p class="description">Mesinhas de Metal - Carla</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5982.jpg" alt="Image 1escription">
+                            <p class="description">Cadeira bordada da Vó - Carla</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5882.jpg" alt="Image 1escription">
+                            <p class="description">Armario de queijo - Carla</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5990.jpg" alt="Image 1escription">
+                            <p class="description">Lustre de sala - Carla</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5986.jpg" alt="Image 1escription">
+                            <p class="description">Cadera da Vó esculpida - Carla</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5987.jpg" alt="Image 1escription">
+                            <p class="description">Decorações - Carla</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5988.jpg" alt="Image 1escription">
+                            <p class="description">Vazo - Carla</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/IMG_5989.jpg" alt="Image 1escription">
+                            <p class="description">Abajur - Carla</p>
+                        </div>
+
+                        <div class="group">
+                            <img src="Images/79666924512__8A7A4819-8B22-4AC5-B66B-5AE4179D00F1.jpg" alt="Image 1escription">
+                            <p class="description">Mesa Esculpida - Carla</p>
+                        </div>
+
+
+                        <!-- IMAGE BLOCK TEMPLATE -->
+                        <!--
+                        <div class="group">
+                            <img src="Images/" alt="Image 1escription">
+                            <p class="description"></p>
+                        </div>
+
+
+                        <div class="sold-overlay">VENDIDO</div>
+
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <br />
-    <br />
-    <br />
-    <hr />
-    <h2>Renata</h2>
-    <div class="gallery">
-        <div class="group">
-            <img src="Images/IMG_5975.jpg" alt="Image description">
-            <p class="description">Arca - Renata</p>
-        </div>
 
 
-        <!-- IMAGE BLOCK TEMPLATE -->
-        <!--
-        <div class="group">
-            <img src="Images/" alt="Image 1escription">
-            <p class="description"></p>
-        </div>
 
 
-        <div class="sold-overlay">VENDIDO</div>
-
-        -->
-    </div>
-
-    <br />
-    <br />
-    <br />
-    <hr />
-    <h2>Carla</h2>
-    <div class="gallery">
-
-        <div class="group">
-            <img src="Images/IMG_5984.jpg" alt="Image 1escription">
-            <p class="description">Mesinha 1 - Carla</p>
-        </div>
-        <div class="group">
-            <img src="Images/IMG_5980.jpg" alt="Image 1escription">
-            <p class="description">Mesinha 2 - Carla</p>
-        </div>
-        <div class="group">
-            <img src="Images/IMG_5979.jpg" alt="Image 1escription">
-            <p class="description">Cadeira de Palinha x2 - Carla</p>
-        </div>
-        <div class="group">
-            <img src="Images/IMG_5981.jpg" alt="Image 1escription">
-            <p class="description">Mesinhas de Metal - Carla</p>
-        </div>
-
-        <div class="group">
-            <img src="Images/IMG_5982.jpg" alt="Image 1escription">
-            <p class="description">Cadeira bordada da Vó - Carla</p>
-        </div>
-
-        <div class="group">
-            <img src="Images/IMG_5882.jpg" alt="Image 1escription">
-            <p class="description">Armario de queijo - Carla</p>
-        </div>
 
 
-        <!-- IMAGE BLOCK TEMPLATE -->
-        <!--
-        <div class="group">
-            <img src="Images/" alt="Image 1escription">
-            <p class="description"></p>
-        </div>
+
+    <script>
+
+        document.addEventListener("click", (e) => {
+            const btn = e.target.closest(".collapsible-toggle");
+            if (!btn) return;
+
+            const group = btn.closest(".collapsible-group");
+            const isAccordion = group?.dataset.accordion === "true";
+
+            const panelId = btn.getAttribute("aria-controls");
+            const panel = document.getElementById(panelId);
+            if (!panel) return;
+
+            const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+            // If accordion mode, close other panels first
+            if (isAccordion && !isOpen && group) {
+                group.querySelectorAll(".collapsible-toggle[aria-expanded='true']").forEach((openBtn) => {
+                    if (openBtn === btn) return;
+                    const otherPanelId = openBtn.getAttribute("aria-controls");
+                    const otherPanel = document.getElementById(otherPanelId);
+                    closePanel(openBtn, otherPanel);
+                });
+            }
+
+            // Toggle clicked panel
+            if (isOpen) {
+                closePanel(btn, panel);
+            } else {
+                openPanel(btn, panel);
+            }
+        });
+
+        function openPanel(btn, panel) {
+            btn.setAttribute("aria-expanded", "true");
+            panel.setAttribute("aria-hidden", "false");
+
+            // Set to actual content height for smooth animation
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+
+        function closePanel(btn, panel) {
+            btn.setAttribute("aria-expanded", "false");
+            panel.setAttribute("aria-hidden", "true");
+
+            // Animate down to 0
+            panel.style.maxHeight = "0px";
+        }
 
 
-        <div class="sold-overlay">VENDIDO</div>
+        window.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".collapsible-toggle[aria-expanded='true']").forEach((btn) => {
+                const panel = document.getElementById(btn.getAttribute("aria-controls"));
+                if (panel) panel.style.maxHeight = panel.scrollHeight + "px";
+            });
+        });
 
-        -->
-    </div>
+
+        
+
+    </script>
 </body>
 </html>
